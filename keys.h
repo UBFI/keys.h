@@ -24,7 +24,7 @@ void pressWindows(){
     SendInput(1, &ip, sizeof(INPUT));
 }
 
-int sendvkeys(stringstart)
+int sendvkeys(stringstart) //Quick note about this function it uses the usleep which is clock based but should be using winAPI to make sure that each call is in step i redacted this for my purposes
 {
 	char * string = stringstart;
 	size_t length = strlen(string);
